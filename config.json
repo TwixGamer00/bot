@@ -1,0 +1,39 @@
+{
+    "owners": [412644564608745502],
+    "guildID": "775420902782402622",
+
+    "ModMailCategory": "806105093580652564",
+    "TicketCategory": "806105093580652564",
+    "supportRole": "804990459893645344",
+    "welcomeID": "805000540810379284",
+
+    "suggestionChannel": "805000540810379284",
+    "bugChannel": "805000540810379284",
+
+    "moderationLogging": "805000540810379284",
+    "logging": "805000540810379284",
+    
+    "confirmEmoji": "✅",
+    "embedColor": "RANDOM",
+    "prefix": "!",
+    "status": "DM for help!",
+
+    "ignorePermissions": {
+        "ban": "",
+        "clearWarnings": "",
+        "deleteTag": "",
+        "deleteWarning": "",
+        "giveaway": "",
+        "kick": "",
+        "lockdown": "",
+        "mute": "",
+        "punishmentInformation": "",
+        "punishments": "",
+        "setTag": "",
+        "tagInformation": "",
+        "unban": "",
+        "unmute": "",
+        "warn": "",
+        "warnings": ""
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "discord-support-bot",
+  "version": "1.0.0",
+  "description": "A support bot for your Discord server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinSchapendonk/discord-support-bot.git"
+  },
+  "keywords": [
+    "Discord",
+    "ModMail",
+    "Tickets",
+    "Support",
+    "Moderation",
+    "Logging"
+  ],
+  "author": "Robin Schapendonk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobinSchapendonk/discord-support-bot/issues"
+  },
+  "homepage": "https://github.com/RobinSchapendonk/discord-support-bot#readme",
+  "dependencies": {
+    "@keyv/sqlite": "^2.0.2",
+    "big-integer": "^1.6.48",
+    "canvacord": "^5.0.8",
+    "canvas": "^2.6.1",
+    "captcha-canvas": "^2.2.2",
+    "discord-canvas": "^1.4.1",
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0",
+    "keyv": "^4.0.3",
+    "nodemon": "^2.0.7"
+  }
+}
