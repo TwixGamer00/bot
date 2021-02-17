@@ -274,7 +274,7 @@ client.on('message', async message => {
 		if (!last || Date.now() - last > 10000) {
 			await client.messageCache.set(`${message.channel.id}/${message.author.id}`, Date.now());
 			const xp = await client.db.xp.get(`${message.guild.id}/${message.author.id}`) || 0;
-			const newXP = xp + 1;
+			const newXP = xp + Math.floor(Math.random() * 5);
 			await client.db.xp.set(`${message.guild.id}/${message.author.id}`, newXP);
 			const lvl = await client.db.level.get(`${message.guild.id}/${message.author.id}`) || 0;
 			if (newXP >= client.xpNeeded(lvl + 1)) {
@@ -317,7 +317,7 @@ client.on('message', async message => {
 	const cmd = client.commands.get(command + '.js');
 	if (cmd && message.guild && !message.author.bot && message.content.startsWith(prefix)) {
 		if (!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) return message.channel.send('I don\'t have permission to send embed messages!');
-		embed.setFooter(`${Buffer.from('TWFkZSBieSA8L1JvYmluU2NoPiM3OTk0', 'base64').toString('utf-8')}`);
+		embed.setFooter(`Made by TwixGamer00`);
 		embed.setAuthor(message.member.displayName, message.author.avatarURL());
 		return cmd.run(client, message, args, prefix, embed);
 	}
@@ -436,6 +436,7 @@ client.on('message', async message => {
 
 	let support = await client.db.modmails.get(message.channel.id);
 	if (support && !message.content.startsWith(prefix) && !message.author.bot && message.content.startsWith(".")) {
+        var toSend = `**${message.author.username} has sent:**`+ " " + message.content.substring(1);
 		support = await client.db.modmails.get(support);
 		const supportUser = await client.users.fetch(support.targetID);
 		if (!supportUser) return message.channel.delete();
@@ -444,7 +445,7 @@ client.on('message', async message => {
 		const files = [];
 		attachments.map(attachment => files.push(attachment.url));
 
-		supportUser.send(message.content, {
+		supportUser.send(toSend, {
 			files
 		});
 
