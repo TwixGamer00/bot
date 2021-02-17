@@ -1,17 +1,17 @@
 {
-    "owners": [412644564608745502],
-    "guildID": "775420902782402622",
+    "owners": [],
+    "guildID": "",
 
-    "ModMailCategory": "806105093580652564",
-    "TicketCategory": "806105093580652564",
-    "supportRole": "804990459893645344",
-    "welcomeID": "805000540810379284",
+    "ModMailCategory": "",
+    "TicketCategory": "",
+    "supportRole": "",
+    "welcomeID": "",
 
-    "suggestionChannel": "805000540810379284",
-    "bugChannel": "805000540810379284",
+    "suggestionChannel": "",
+    "bugChannel": "",
 
-    "moderationLogging": "805000540810379284",
-    "logging": "805000540810379284",
+    "moderationLogging": "",
+    "logging": "",
     
     "confirmEmoji": "✅",
     "embedColor": "RANDOM",
