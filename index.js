@@ -50,8 +50,9 @@ if (!config.welcomeID) {
 }
 
 const Discord = require("discord.js");
-const bigInt = require("big-integer");
+const bigInt = require("big-integer");	
 const Keyv = require("keyv");
+const canvacordD = require("discord-canvas");
 
 const client = new Discord.Client();
 client.db = {
@@ -451,7 +452,6 @@ client.on("message", async message => {
 		return message.react(confirmEmoji);
 	}
 });
-const canvacordD = require("discord-canvas");
 client.on("guildMemberAdd", async member => {
 	if (!member.user.bot) {
 		const avatarURL = await client.getProfilePic(member.user);
