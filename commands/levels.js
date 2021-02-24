@@ -1,14 +1,11 @@
-const { createCanvas, loadImage } = require('canvas');
-const { MessageAttachment } = require('discord.js');
+const { MessageAttachment } = require("discord.js");
 const canvacord = require("canvacord");
-// eslint-disable-next-line no-unused-vars
-module.exports.run = async (client, message, args, prefix, embed) => {
+module.exports.run = async (client, message, args) => {
     if (!args[0]) args[0] = message.author.id;
 	client.GetMemberFromArg(args[0], message.guild.members).then(async member => {
 		if (!member) member = message.member;
 		const level = await client.db.level.get(`${message.guild.id}/${member.id}`) || 0;
 		const xp = await client.db.xp.get(`${message.guild.id}/${member.id}`) || 0;
-		const oldXP = await client.xpNeeded(level);
 		const newXP = await client.xpNeeded(level + 1);
 		const avatarURL = await getProfilePic(member.user);
 
@@ -36,10 +33,10 @@ module.exports.run = async (client, message, args, prefix, embed) => {
 
 
 exports.help = {
-	name: 'levels',
-	category: 'Levels',
-	description: 'Check someone their level',
-	usage: 'levels [GuildMember]',
+	name: "levels",
+	category: "Levels",
+	description: "Check someone their level",
+	usage: "levels [GuildMember]",
 };
 
 
